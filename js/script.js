@@ -9,3 +9,20 @@
 // Crea due array che hanno un numero di elementi diversi.  Aggiungi elementi all’array che ha meno elementi 
 // fino a quando ne avrà tanti quanti l’altro.
 
+const number = document.querySelector('#number1');
+const button1 = document.querySelector('#btn1');
+const btn1 = function(){
+    const result1 = document.querySelector('#result1');
+    if (number.value%2 == 0){
+        result1.innerHTML = number.value
+    }else{
+        result1.innerHTML = (parseInt(number.value) + 1);
+    }
+    number.value = '';
+}
+button1.addEventListener('click', btn1);
+
+const nameList = ['Leonardo','Valentina','Alessio','Simone','Fabio','Giada','Stefania','Lorenzo','Mattia','Marco'];
+const lastNameList = ['Pozzan','Zussino','Bonadonna','Carrabba','Martinelli','Volpin','Sperani','Castiglion','Fasulo','Sbrascia'];
+
+
