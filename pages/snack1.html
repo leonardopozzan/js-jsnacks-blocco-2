@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Snack</title>
 </head>
 <body>
@@ -17,11 +17,11 @@
     <header>
         <nav class="h-100">
             <ul class="d-flex align-items-center h-100">
-                <li><a href="#" class="text-white fs-2 me-5 fw-bold home">Home Page</a></li>
-                <li><a href="pages/snack1.html" class="text-white fs-4 mx-4 fw-bold">Snack 1</a></li>
-                <li><a href="pages/snack2.html" class="text-white fs-4 me-4 fw-bold">Snack 2</a></li>
-                <li><a href="pages/snack3.html" class="text-white fs-4 me-4 fw-bold">Snack 3</a></li>
-                <li><a href="pages/snack4.html" class="text-white fs-4 me-4 fw-bold">Snack 4</a></li>
+                <li><a href="../index.html" class="text-white fs-2 me-5 fw-bold home">Home Page</a></li>
+                <li><a href="#" class="text-white fs-4 mx-4 fw-bold">Snack 1</a></li>
+                <li><a href="snack2.html" class="text-white fs-4 me-4 fw-bold">Snack 2</a></li>
+                <li><a href="snack3.html" class="text-white fs-4 me-4 fw-bold">Snack 3</a></li>
+                <li><a href="snack4.html" class="text-white fs-4 me-4 fw-bold">Snack 4</a></li>
             </ul>
         </nav>
     </header>
@@ -29,10 +29,17 @@
     <main>
         <div class="wrapper">
             <div class="box">
-                <h1>Scegli il tuo snack preferito nella navbar</h1>
+                <div class="py-3">
+                    <h1 class="mb-5">Se pari stampa, se dispari aumenta</h1>
+                    <label for="" class="fs-4 me-3">Inserisci un numero</label>
+                    <input type="number" id="number1">
+                    <input type="button" id="btn1" value="Invia" class="btn btn-dark ms-3 fs-5">
+                    <div id="result1" class="text-center mt-5 fs-1"></div>
+                </div>
             </div>
         </div>
     </main>
 
+    <script src="../js/script1.js"></script>
 </body>
 </html>

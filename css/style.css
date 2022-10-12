@@ -3,7 +3,59 @@
     padding:  0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #969442;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: #3B7896;
+    height: 80px;
+    margin-bottom: 50px;
+}
 .my-container{
     width: 1200px;
     margin: 20px auto;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+.home{
+    background-color: #285064;
+    padding: 10px;
+    border-radius: 20px;
+}
+.box{
+    padding: 80px;
+    background-color: #3B7896;
+    border-radius: 50px;
+    color: white;
+    overflow: auto;
+
+}
+#result1{
+    height: 50px;
+}
+#result2 > *{
+    font-size: 20px;
+    width: calc(100% / 4);
+    margin-bottom: 20px;
+}
+#result3-1, #result3-2{
+    font-size: 25px;
+    margin-top: 25px;
+}
+#result4-1, #result4-2{
+    font-size: 25px;
+    margin-top: 25px;
 }
