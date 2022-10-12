@@ -71,10 +71,9 @@ const btn3 = function(){
         }
         let sum = 0;
         console.log(arrayRandom);
-        for(let i = 0; i<arrayRandom.length; i++){
-            if(i%2 != 0){
-                sum += arrayRandom[i];
-            } 
+        for(let i = 1; i<arrayRandom.length; i++){
+            sum += arrayRandom[i];
+            i++;
         }
         let text = arrayRandom.toString();
         result3.innerHTML = 'La lista creata è: ' + text;
@@ -85,3 +84,62 @@ const btn3 = function(){
 }
 button3.addEventListener('click', btn3);
 
+
+let arrayRandom1 = [];
+let arrayRandom2 = [];
+
+const button4 = document.querySelector('#btn4');
+const btn4 = function(){
+    const result3 = document.querySelector('#result4-1');
+    result3.innerHTML = '';
+    const result4 = document.querySelector('#result4-2');
+    result4.innerHTML = '';
+    let numberMax = 100;
+    let numbersToGenerate1 = document.querySelector('#number4-1').value;
+    let numbersToGenerate2 = document.querySelector('#number4-2').value;
+    let numbersToGenerateArray = [numbersToGenerate1,numbersToGenerate2];
+    let mainArrayRandom = [arrayRandom1,arrayRandom2];
+    
+    for(let k = 0 , z = 0; k<numbersToGenerateArray.length && z<mainArrayRandom.length; k++, z++){
+        for (let i = 1; i <= numbersToGenerateArray[k]; i++) {
+            let check = false;
+            let generatedNumber = Math.floor(Math.random() * numberMax);
+            for (let j = 0; j < mainArrayRandom[z].length; j++) {
+                if (generatedNumber == mainArrayRandom[z][j]) {
+                    check = true;
+                    i--;
+                }
+            }
+            if (!check) {
+                mainArrayRandom[z].push(generatedNumber);
+            }
+        }
+    }
+    console.log(numbersToGenerate1)
+    console.log(numbersToGenerate2)
+    console.log(numbersToGenerateArray)
+    console.log(arrayRandom1)
+    console.log(arrayRandom2)
+    console.log(mainArrayRandom)
+
+    if(numbersToGenerate1 > numbersToGenerate2){
+        for(let i =0; i<(numbersToGenerate1 - numbersToGenerate2); i++){
+            arrayRandom2.push('-');
+        }
+    }else if(numbersToGenerate2 > numbersToGenerate1){
+        
+        for(let i =0; i<(numbersToGenerate2 - numbersToGenerate1); i++){
+            arrayRandom1.push('-');
+        }
+    }
+    console.log(arrayRandom1.length)
+    console.log(arrayRandom2.length)
+
+    let text1 = arrayRandom1.toString();
+    let text2 = arrayRandom2.toString();
+    let message = 'Lista 1: ' + text1 + '&nbsp;'+ '&nbsp;'+ '&nbsp;'+ '&nbsp;'+ '&nbsp;'+ 'Lista 2: ' + text2;
+    result3.innerHTML = message;
+    arrayRandom1 =[];
+    arrayRandom2 =[]; 
+}
+button4.addEventListener('click', btn4);
