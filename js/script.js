@@ -22,7 +22,24 @@ const btn1 = function(){
 }
 button1.addEventListener('click', btn1);
 
-const nameList = ['Leonardo','Valentina','Alessio','Simone','Fabio','Giada','Stefania','Lorenzo','Mattia','Marco'];
-const lastNameList = ['Pozzan','Zussino','Bonadonna','Carrabba','Martinelli','Volpin','Sperani','Castiglion','Fasulo','Sbrascia'];
+const nameList = ['Leonardo','Valentina','Alessio','Simone','Fabio','Giada','Stefania','Lorenzo','Mattia','Marco','Andrea','Pietro','Gabriel','Simone','Clelia'];
+const lastNameList = ['Pozzan','Zussino','Bonadonna','Carrabba','Martinelli','Volpin','Sperani','Castiglion','Fasulo','Sbrascia','Gallini','Brighella','Spanu','Allegra','Fradella'];
 
+const button2 = document.querySelector('#btn2');
+const btn2 = function(){
+    const result2 = document.querySelector('#result2');
+    result2.innerHTML = '';
+    let nameListCopia = nameList.slice();
+    let lastNameListCopia = lastNameList.slice();
+    for( let i = 0; i < nameList.length && i < lastNameList.length; i++){
+        let randomName = Math.floor(Math.random()*nameListCopia.length);
+        let randomLastName = Math.floor(Math.random()*lastNameListCopia.length);
+        const liElement = document.createElement('li');
+        result2.append(liElement);
+        liElement.innerHTML += (nameListCopia[randomName] + ' '+ lastNameListCopia[randomLastName])
+        nameListCopia.splice(randomName,1);
+        lastNameListCopia.splice(randomLastName,1);
+    }
 
+}
+button2.addEventListener('click', btn2);
